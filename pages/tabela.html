@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css"> <!-- =====BOX ICONS===== -->
+
+  <title>Document</title>
+</head>
+<style>
+  :root {
+  --russian-violet: hsl(269, 36%, 22%);
+  --dark-purple: hsl(268, 22%, 15%);
+  --eerie-black: hsl(240, 4%, 10%);
+  --davys-gray: hsl(0, 0%, 34%);
+  --light-gray: hsl(0, 0%, 84%);
+  --cultured-1: hsl(0, 0%, 98%);
+  --cultured-2: hsl(280, 14%, 96%);
+  --cultured-3: hsl(280, 9%, 94%);
+  --gainsboro: hsl(0, 1%, 85%);
+  --black_10: hsla(0, 0%, 0%, 0.1);
+  --black_5: hsla(0, 0%, 0%, 0.05);
+  --pumpkin: hsl(22, 90%, 56%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cultured-1);
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 16px;
+  color: var(--davys-gray);
+}
+
+th, td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid var(--cultured-2);
+}
+
+th {
+  background-color: var(--russian-violet);
+  color: var(--white);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: var(--cultured-2);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--cultured-3);
+}
+
+tbody tr:hover {
+  background-color: var(--gainsboro);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+</style>
+<body style="padding-top: 110px;"> <!-- Adicionei padding-top caso o header seja fixo -->
+  <header class="header" data-header>
+      <div class="container">
+          <a href="/" class="logo">LHVR ESPORTES</a>
+          <nav class="navbar" data-navbar>
+              <ul class="navbar-list container">
+                  <li><a href="/pages/resultado.html" class="navbar-link active" data-nav-link>Resultado</a></li>
+                  <li><a href="/pages/grupos.HTML" class="navbar-link" data-nav-link>grupos</a></li>
+                  <li><a href="/pages/artileiro.html" class="navbar-link" data-nav-link>Artileiro</a></li>
+                  <li><a href="/pages/campeonatos.html" class="navbar-link" data-nav-link>Campeonatos	</a></li>
+                  <li><a href="https://instagram.com/lhvr_esportes?igshid=YmMyMTA2M2Y="	class="btn btn-primary">Instagram</a></li>
+              </ul>
+          </nav>
+      </div> <!-- ❗️ Fechamento correto da div.container -->
+  </header>
+
+
+  <table>
+		<thead>
+			<tr>
+				<th>Posição</th>
+				<th>Time</th>
+				<th>Pontos</th>
+				<th>Jogos</th>
+				<th>Vitórias</th>
+				<th>Empates</th>
+				<th>Derrotas</th>
+				<th>Gols Pró</th>
+				<th>Gols Solfridos</th>
+				<th>Saldo de Gols</th>
+			</tr>
+		</thead>
+		<tbody>
+			 <tr>
+                <td>1</td>
+                <td>Informática 2</td>
+                <td>12</td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>24</td>
+                <td>2</td>
+                <td>+22</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Finanças 3</td>
+                <td>10</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>24</td>
+                <td>9</td>
+                <td>+15</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Segurança 3</td>
+                <td>9</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>16</td>
+                <td>5</td>
+                <td>+11</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Enfermagem</td>
+                <td>7</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>17</td>
+                <td>9</td>
+                <td>+8</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Segurança 2</td>
+              <td>5</td>
+              <td>4</td>
+              <td>1</td>
+              <td>2</td>
+              <td>1</td>
+              <td>20</td>
+              <td>16</td>
+              <td>+4</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Finanças 1</td>
+            <td>4</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>10</td>
+            <td>7</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Finanças 2</td>
+          <td>4</td>
+          <td>3</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>6</td>
+          <td>6</td>
+          <td>+0</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Agronegócio 1</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>2</td>
+        <td>18</td>
+        <td>-16</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Informática 1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>8</td>
+      <td>23</td>
+      <td>-15</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Informática 3</td>
+    <td>1</td>
+    <td>4</td>
+    <td>0</td>
+    <td>1</td>
+    <td>3</td>
+    <td>6</td>
+    <td>24</td>
+    <td>-18</td>
+</tr>
+
+
+          
+</body>
+</html>
