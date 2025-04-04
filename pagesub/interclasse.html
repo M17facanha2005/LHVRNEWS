@@ -2,243 +2,142 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INTERCLASSE</title>
-  <link rel="shortcut icon" href="logos/LHVR NEWS.jpg" type="image/x-icon">
-  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Galeria Interclasse</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      list-style: none;
-      text-decoration: none;
     }
-    :root {
-      --red: #d63a25;
-      --white: #fff;
-      --dark: #1e1c2a;
-    }
+
     body {
-      color: var(--dark);
-      background: var(--white);
+      background: #f2f2f2;
+      padding: 60px 20px;
     }
-    .navigation {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 40px;
-      box-shadow: 0 0.1rem 0.5rem #ccc;
-      width: 100%;
-      background: var(--white);
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-    }
-    .navigation .logo {
-      color: var(--red);
-      font-size: 1.7rem;
-      font-weight: 600;
-    }
-    .navigation ul {
-      display: flex;
-      align-items: center;
-      gap: 5rem;
-    }
-    .navigation ul li a {
-      color: var(--dark);
-      font-size: 17px;
-      font-weight: 500;
-      transition: all 0.5s;
-    }
-    .navigation ul li a:hover {
-      color: var(--red);
-    }
-    .menu {
-      cursor: pointer;
-      display: none;
-    }
-    .menu .bar {
-      display: block;
-      width: 28px;
-      height: 3px;
-      border-radius: 3px;
-      background: var(--dark);
-      margin: 5px auto;
-      transition: all 0.3s;
-    }
-    .menu .bar:nth-child(1),
-    .menu .bar:nth-child(3) {
-      background: var(--red);
-    }
-    .home {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 100px 10% 50px;
-      flex-wrap: wrap;
-    }
-    .home-text {
-      max-width: 37rem;
-    }
-    .text-h4 {
-      font-size: 1.5rem;
-      color: var(--red);
-      margin-bottom: 1rem;
-    }
-    .text-h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      line-height: 4rem;
-    }
-    .home-btn {
-      padding: 15px 45px;
-      background: var(--red);
-      color: var(--white);
-      border-radius: 10px;
-      font-weight: 700;
-      transition: all 0.5s;
-    }
-    .home-btn:hover {
-      background: #c90f0f;
-    }
-    .home-img img {
-      width: 100%;
-    }
-    /* Cards de notícias */
+
     .cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 40px 10%;
     }
+
     .card {
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
       overflow: hidden;
-      transition: transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: none;
     }
-    .card:hover {
-      transform: translateY(-5px);
+
+    .card.visible {
+      display: block;
     }
+
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
+
     .card-content {
       padding: 15px;
     }
+
     .card-content h3 {
-      font-size: 1.2rem;
+      font-size: 18px;
       margin-bottom: 10px;
-      color: #222;
-    }
-    .card-content p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    .card-content a {
-      display: inline-block;
-      margin-top: 10px;
-      color: var(--red);
-      font-weight: 600;
+      color: #333;
     }
 
-    @media (max-width: 768px) {
-      .menu {
-        display: block;
-      }
-      .nav-menu {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--white);
-        flex-direction: column;
-        gap: 20px;
-        transition: 0.3s;
-        padding-top: 20px;
-      }
-      .nav-menu.ativo {
-        right: 0;
-      }
+    .card-content p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .card-content a {
+      color: #d63a25;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .show-more-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .show-more-btn {
+      padding: 10px 20px;
+      background: #d63a25;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .show-more-btn:hover {
+      background: #b32d1d;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav class="navigation">
-      <ul class="nav-menu">
-        <li><a href="#">Futsal</a></li>
-        <li><a href="#">Vôlei</a></li>
-        <li><a href="#">Carimba</a></li>
-        <li><a href="#">HandBall</a></li>
-      </ul>
-      <div class="menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <section class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="/img/esportes3.jpeg" alt="Jogo Segurança x Informática">
+      <div class="card-content">
+        <h3>Segurança 2 x Informática 1</h3>
+        <p>O jogo de abertura da Copinha LHVR começou com goleada: 11 x 3 para Segurança 2. João Vitor marcou 4 gols e foi o destaque.</p>
+        <a href="https://www.instagram.com/p/CpNkWaMuB9k" target="_blank">Ver no Instagram</a>
       </div>
-    </nav>
-  </header>
+    </div>
 
-  <main>
-    <section class="home">
-      <div class="home-text">
-        <h4 class="text-h4">EEEP Lúcia Helena Viana Ribeiro</h4>
-        <h1 class="text-h1">InterClasse</h1>
-        <a href="https://instagram.com/lhvr_esportes" class="home-btn" target="_blank">Instagram</a>
-      </div>
-      <div class="home-img">
-        <img src="/img/brasao2.png" alt="Logo LHVR">
-      </div>
-    </section>
+    <!-- Exemplo de mais cards (repita o bloco acima com suas fotos e textos) -->
+    <!-- Você pode fazer até 30 ou mais -->
 
-    <section class="cards-container">
-      <!-- Card de notícia -->
-      <div class="card">
-        <img src="/img/esportes3.jpeg" alt="Jogo Segurança x Informática">
-        <div class="card-content">
-          <h3>Segurança 2 x Informática 1</h3>
-          <p>
-            O jogo de abertura da Copinha LHVR começou com goleada: 11 x 3 para Segurança 2. João Vitor marcou 4 gols e foi o destaque.
-          </p>
-          <a href="https://www.instagram.com/p/CpNkWaMuB9k" target="_blank">Ver no Instagram</a>
-        </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="/img/esportes4.jpeg" alt="Jogo Técnico x Enfermagem">
+      <div class="card-content">
+        <h3>Técnico 3 x Enfermagem 0</h3>
+        <p>Com gols de Pedro e Lucas, o time técnico vence a enfermagem com placar de 3 a 0 no segundo jogo da manhã.</p>
+        <a href="https://www.instagram.com/p/CqX7gJMuTnX" target="_blank">Ver no Instagram</a>
       </div>
+    </div>
 
-      <!-- Novo card? Só copiar abaixo esse bloco -->
-      <!--
-      <div class="card">
-        <img src="/img/sua-imagem.jpeg" alt="Título da Notícia">
-        <div class="card-content">
-          <h3>Título da Notícia</h3>
-          <p>Descrição curta da notícia ou evento.</p>
-          <a href="https://instagram.com/seu-link" target="_blank">Ver no Instagram</a>
-        </div>
-      </div>
-      -->
-    </section>
-  </main>
+    <!-- Adicione mais cards aqui -->
+  </section>
+
+  <div class="show-more-container">
+    <button class="show-more-btn">Mostrar mais</button>
+  </div>
 
   <script>
-    const menu = document.querySelector('.menu');
-    const navMenu = document.querySelector('.nav-menu');
+    const cards = document.querySelectorAll('.card');
+    const btn = document.querySelector('.show-more-btn');
+    let shown = 0;
+    const showCount = 6;
 
-    menu.addEventListener('click', () => {
-      menu.classList.toggle('ativo');
-      navMenu.classList.toggle('ativo');
-    });
+    function showCards() {
+      for (let i = shown; i < shown + showCount; i++) {
+        if (cards[i]) {
+          cards[i].classList.add('visible');
+        }
+      }
+      shown += showCount;
+      if (shown >= cards.length) {
+        btn.style.display = 'none';
+      }
+    }
+
+    showCards(); // Mostrar os primeiros ao carregar
+    btn.addEventListener('click', showCards);
   </script>
+
 </body>
 </html>
