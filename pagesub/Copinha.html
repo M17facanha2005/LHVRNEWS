@@ -113,7 +113,15 @@
 
     .show-more-btn:hover {
       background: #a62318;
+      
     }
+    /* Container */
+  .noticias-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
   </style>
 </head>
 <body style="padding-top: 110px;"> <!-- Adicionei padding-top caso o header seja fixo -->
@@ -131,6 +139,16 @@
         </div> <!-- ❗️ Fechamento correto da div.container -->
     </header>
 
+  <!-- Notícia 1 -->
+  <div class="noticia">
+    <img src="/img/capaa.jpeg" alt="Capa">
+    <div class="noticia-content">
+      <h2>Manchete da Copinha</h2>
+      <p>Acompanhe tudo sobre a Copinha LHVR diretamente no nosso Instagram.</p>
+      <a href="https://instagram.com/lhvr_esportes?igshid=YmMyMTA2M2Y=" target="_blank">Acompanhe</a>
+    </div>
+  </div>
+    
   <main>
     <section class="cards-container" id="cards">
       <!-- Exemplo de Card -->
