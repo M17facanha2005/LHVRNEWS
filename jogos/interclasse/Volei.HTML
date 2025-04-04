@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vôlei - LHVR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: #1e1c2a;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-menu li a:hover {
+      color: #d63a25;
+    }
+
+    .cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    .card.visible {
+      display: block;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .card-content a {
+      color: #d63a25;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .show-more-container {
+      text-align: center;
+      margin: 20px 0 60px;
+    }
+
+    .show-more-btn {
+      background: #d63a25;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .show-more-btn:hover {
+      background: #a62318;
+    }
+  </style>
+</head>
+<body style="padding-top: 110px;"> <!-- Adicionei padding-top caso o header seja fixo -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="/" class="logo">LHVR ESPORTES</a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list container">
+                    <li><a href="/pagesub/interclasse.html" class="navbar-link active" data-nav-link>interclasse</a></li>
+                    <li><a href="/jogos/interclasse/HandBall.html" class="navbar-link" data-nav-link>HandBall</a></li>
+                    <li><a href="/jogos/interclasse/Futsal.html" class="navbar-link" data-nav-link>Futsal</a></li>
+                    <li><a href="/jogos/interclasse/Carimba.html" class="navbar-link" data-nav-link>Carimba</a></li>
+                    <li><a href="https://instagram.com/lhvr_esportes?igshid=YmMyMTA2M2Y="	class="btn btn-primary">Instagram</a></li>
+                </ul>
+            </nav>
+        </div> <!-- ❗️ Fechamento correto da div.container -->
+    </header>
+
+  <main>
+    <section class="cards-container" id="cards">
+      <!-- Exemplo de Card -->
+      <div class="card">
+        <img src="/img/esportes3.jpeg" alt="Segurança x Informática">
+        <div class="card-content">
+          <h3>Segurança 2 x Informática 1</h3>
+          <p>O jogo de abertura da Copinha LHVR começou com goleada: 11 x 3 para Segurança 2. João Vitor marcou 4 gols e foi o destaque.</p>
+          <a href="https://www.instagram.com/p/CpNkWaMuB9k" target="_blank">Ver no Instagram</a>
+        </div>
+      </div>
+
+      <!-- Adicione mais cards aqui até 30 -->
+    </section>
+
+    <div class="show-more-container">
+      <button class="show-more-btn">Mostrar mais</button>
+    </div>
+  </main>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const btn = document.querySelector('.show-more-btn');
+    let shown = 0;
+    const showCount = 6;
+
+    function showCards() {
+      for (let i = shown; i < shown + showCount; i++) {
+        if (cards[i]) {
+          cards[i].classList.add('visible');
+        }
+      }
+      shown += showCount;
+      if (shown >= cards.length) {
+        btn.style.display = 'none';
+      }
+    }
+
+    showCards();
+    btn.addEventListener('click', showCards);
+  </script>
+
+</body>
+</html>
