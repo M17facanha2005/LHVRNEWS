@@ -412,49 +412,49 @@
       margin-block-end: 30px;
     }
 
-    .lhvr-esportes {
-      background-color: #2e1c46;
-      color: white;
-      padding: 60px 20px;
-    }
-    
-    .container-esportes {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    
-    .texto-esportes {
-      flex: 1;
-      min-width: 300px;
-    }
-    
-    .subtitulo {
-      color: #e0472e;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    
-    .descricao {
-      max-width: 500px;
-      font-size: 1rem;
-    }
-    
-    .imagem-esportes {
-      flex: 1;
-      min-width: 280px;
-      display: flex;
-      justify-content: center;
-    }
-    
-    .imagem-esportes img {
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-    
+   .lhvr-esportes {
+  background-color: #2e1c46;
+  color: white;
+  padding: 60px 20px;
+}
+
+.container-esportes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.texto-esportes {
+  flex: 1;
+  min-width: 300px;
+}
+
+.subtitulo {
+  color: #e0472e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  max-width: 500px;
+  font-size: 1rem;
+}
+
+.imagem-esportes {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-esportes img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 
 
 
