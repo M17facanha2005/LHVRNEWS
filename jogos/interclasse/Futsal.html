@@ -114,6 +114,30 @@
     .show-more-btn:hover {
       background: #a62318;
     }
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 120px 10% 60px;
+      flex-wrap: wrap;
+    }
+
+    .home-text {
+      max-width: 500px;
+    }
+
+    .home-text .text-h4 {
+      font-size: 20px;
+      color: #d63a25;
+      margin-bottom: 10px;
+    }
+
+    .home-text .text-h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #1e1c2a;
+    }
+    
   </style>
 </head>
 <body style="padding-top: 110px;"> <!-- Adicionei padding-top caso o header seja fixo -->
@@ -133,6 +157,18 @@
     </header>
 
   <main>
+
+    <section class="home">
+      <div class="home-text">
+        <h4 class="text-h4">EEEP Lúcia Helena Viana Ribeiro</h4>
+        <h1 class="text-h1">Jogos de Futsal</h1>
+        <a href="https://instagram.com/lhvr_esportes" class="home-btn" target="_blank">Instagram</a>
+      </div>
+      <div class="home-img">
+        <img src="/img/brasao2.png" alt="Logo LHVR">
+      </div>
+    </section>
+
     <section class="cards-container" id="cards">
       <!-- Exemplo de Card -->
       <div class="card">
