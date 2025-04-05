@@ -257,7 +257,7 @@
 
     .btn-item-link {
       overflow: hidden;
-      border-radius: var(--r.app-banneradius-10);
+      border-radius: var(--radius-10);
     }
 
     .btn-item-link .img {
