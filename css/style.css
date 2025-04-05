@@ -650,10 +650,14 @@
 
     .footer-top .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      align-items: start;
+      grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      align-items: flex-start;
     }
+    
     
 
     .footer-top .section-text {
