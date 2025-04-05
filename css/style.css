@@ -650,8 +650,11 @@
 
     .footer-top .container {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
+      align-items: start;
     }
+    
 
     .footer-top .section-text {
       margin-block: 15px 22px;
