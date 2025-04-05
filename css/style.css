@@ -649,11 +649,11 @@
 }
 
 .footer-top .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px; /* espaço entre as colunas */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
 }
+
 
 .footer-list {
   flex: 1 1 200px; /* largura mínima e flexível */
