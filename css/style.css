@@ -397,7 +397,7 @@
     .hero {
       background-color: var(--russian-violet);
       color: var(--white);
-      padding-block-start: calc(var(--section-padding) + 60px);
+      padding-block-start: calc(var(--section-padding) + 30px);
     }
 
     .hero-content {
