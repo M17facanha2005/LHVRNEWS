@@ -664,13 +664,28 @@
 }
 
 .footer-link {
-  font-size: var(--fs-4);
-  margin-top: 10px;
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
   text-decoration: none;
-  transition: var(--transition-1);
+  transition: all 0.3s ease;
 }
+
+.footer-link ion-icon {
+  font-size: 16px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ff6600;
+}
+
+.footer-link:hover ion-icon {
+  color: #ff6600;
+}
+
 
 /* Hover com sublinhado animado */
 .footer-link::after {
