@@ -17,6 +17,9 @@
       --cultured-2: hsl(280, 14%, 96%);
       --cultured-3: hsl(280, 9%, 94%);
       --gainsboro: hsl(0, 1%, 85%);
+      --black_10: hsla(0, 0%, 0%, 0.1);
+      --black_5: hsla(0, 0%, 0%, 0.05);
+      --pumpkin: hsl(22, 90%, 56%);
       --white: hsl(0, 0%, 100%);
       --black: hsl(0, 0%, 0%);
     }
@@ -25,26 +28,13 @@
       font-family: Arial, sans-serif;
       background-color: var(--cultured-1);
       margin: 0;
-      padding-top: 110px;
+      padding: 0;
     }
-
-    
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
- 
-    
-
 
     table {
       border-collapse: collapse;
       width: 100%;
-      max-width: 1000px;
+      max-width: 800px;
       margin: 30px auto;
       font-size: 16px;
       color: var(--davys-gray);
@@ -75,47 +65,17 @@
       cursor: pointer;
     }
 
-    /* RESPONSIVO */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
+    @media only screen and (max-width: 600px) {
+      table {
+        font-size: 14px;
       }
 
-      
-
-      table thead {
-        display: none;
-      }
-
-      table, tbody, tr, td {
-        display: block;
-        width: 100%;
-      }
-
-      tr {
-        margin-bottom: 15px;
-        background-color: var(--cultured-2);
-        border: 1px solid var(--cultured-3);
-      }
-
-      td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-      }
-
-      td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        width: 45%;
-        padding-left: 10px;
-        font-weight: bold;
-        text-align: left;
-        color: var(--dark-purple);
+      th, td {
+        padding: 10px;
       }
     }
   </style>
+
 </head>
 
 <body>
