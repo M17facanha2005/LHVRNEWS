@@ -257,7 +257,7 @@
 
     .btn-item-link {
       overflow: hidden;
-      border-radius: var(--radius-10);
+      border-radius: var(--r.app-banneradius-10);
     }
 
     .btn-item-link .img {
@@ -267,7 +267,7 @@
     .w-100 {
       width: 100%;
       height: 100%;
-      ;
+      
     }
 
     .section-title {
